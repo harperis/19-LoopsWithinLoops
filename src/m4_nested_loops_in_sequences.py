@@ -103,7 +103,11 @@ def run_test_multiply_numbers():
 
 
 def multiply_numbers(sequence_of_lists):
-    
+    for j in range(len(sequence_of_lists)):
+        sublist = sequence_of_lists[j]
+        for k in range(len(sublist)):
+            sublist[k] = sublist[k] * (j + 1)
+
     """
     In the given sequence of lists,
       -- multiplies each element of the first list by 1,
@@ -118,7 +122,7 @@ def multiply_numbers(sequence_of_lists):
        [FYI: This 'can be multiplied ...' is an example of DUCK TYPING.]
     """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # Done: 2. Implement and test this function.
     #  ** READ THE TESTS that have been written for you (ABOVE).
     #  ** ASK QUESTIONS if you do not understand the TESTS (ABOVE).
     #
@@ -154,9 +158,19 @@ def run_test_sum_numbers():
     print('Expected and actual are:', expected, answer)
 
     # TO DO 3 (continued): Add your ADDITIONAL test(s) here:
+    expected = 27
+    answer = sum_numbers([(6, 3, 10), (4, 2), (1, 1)])
+    print('Expected and actual are:', expected, answer)
 
 
 def sum_numbers(seq_seq):
+    total = 0
+    for j in range(len(seq_seq)):
+        sublist = seq_seq[j]
+        for k in range(len(sublist)):
+            total = total + sublist[k]
+    return total
+
     """
     Returns the sum of the numbers in the given sequence
     of subsequences.  For example, if the given argument is:
@@ -167,7 +181,7 @@ def sum_numbers(seq_seq):
                     and each item in the subsequences is a number.
     """
     # ------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # Done: 4. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     # ------------------------------------------------------------------
 
@@ -199,6 +213,10 @@ def run_test_print_characters():
 
 
 def print_characters(sequence_of_strings):
+    for j in range(len(sequence_of_strings)):
+        sublist = sequence_of_strings[j]
+        for k in range(len(sublist)):
+            print(sublist[k])
     """
     Prints all the characters in the sequence of strings,
     but each character on ITS OWN LINE.  For example,
@@ -218,7 +236,7 @@ def print_characters(sequence_of_strings):
     Precondition:  the given argument is a sequence of strings.
     """
     # ------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # Done: 5. Implement and test this function.
     #  ** READ THE TESTS that have been written for you (ABOVE).
     #  ** ASK QUESTIONS if you do not understand the TESTS (ABOVE).
     # ------------------------------------------------------------------
@@ -253,6 +271,11 @@ def run_test_print_characters_slanted():
 
 
 def print_characters_slanted(sequence_of_strings):
+    for j in range(len(sequence_of_strings)):
+        sublist = sequence_of_strings[j]
+        for k in range(len(sublist)):
+            slanted_sequence = (' ' * k) + sublist[k]
+            print(slanted_sequence)
     """
     Same as the previous problem, but each string 'slants'.
     For example, if the given argument is ['hi', 'bye', 'a_tie!'],
@@ -271,7 +294,7 @@ def print_characters_slanted(sequence_of_strings):
     Precondition:  the given argument is a sequence of strings.
     """
     # ------------------------------------------------------------------
-    # TODO: 6. Implement and test this function.
+    # Done: 6. Implement and test this function.
     #  ** READ THE TESTS that have been written for you (ABOVE).
     #  ** ASK QUESTIONS if you do not understand the TESTS (ABOVE).
     #

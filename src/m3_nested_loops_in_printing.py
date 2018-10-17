@@ -197,7 +197,7 @@ def run_test_alternating_brackets():
 def alternating_brackets(m, n):
     for j in range(m - (n - 1)):
         for k in range(m - j):
-            print('[' + ']', end=' ')
+            print('['  ']', end=' ')
         print()
     """
     Prints alternating left/right square brackets:  m on the first row,
